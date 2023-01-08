@@ -1,0 +1,110 @@
+HTML
+Hyper Text Markup Language
+- HyperText는 문서를 서로 연결해 주는 링크
+- Markup은 ‘표시하다’라는 뜻, 웹 브라우저에 내용을 보여주는 텍스트, 이미지, 영상 등의 위치를 표시하는 것을 의미
+
+tag - 웹 브라우저가 어느 부분이 제목, 텍스트 또는 표인지 구별할 수 있도록 꼬리표를 붙여준 	  것
+
+HTML5 - 이전 버전과 구별하기 위해 HTML5로 부름. 최근 대부분의 웹 브라우저에서				 HTML5를 지원하게 되면서 그냥 HTML이라 부르게 되었음
+
+<!DOCTYPE html> : 현재 문서가 HTML5 언어로 작성한 웹 문서라는 뜻
+<html> ~ </html> : 웹 문서의 시작과 끝
+<head> ~ </head> : 웹 브라우저가 웹 문서를 해석하는데 필요한 정보를 입력하는 부분
+<body> ~ </body> : 실제로 웹 브라우저 화면에 나타나는 내용
+
+<meta> : 문자 세트를 비롯해 문서 정보가 들어있는 태그(데이터에 관한 데이터)
+ex. 어떤 인코딩, 웹 사이트의 키워드나 간단한 설명, 제작자 등의 정보를 지정 가능
+이 정보는 검색 엔진에서 사이트를 검색할 때 참고한다.
+
+<title> ~ </title> : 문서 제목
+<hn> ~ </hn> : 제목을 뜻하는 heading의 줄임 말. n은 1 ~ 6(글씨 크기)
+<hr> : 경계선 그어 줌
+
+시맨틱(semantic) 태그 : HTML 태그 이름만 봐도 의미를 알 수 있기 때문
+<header></header>: 검색 창이나 사이트 메뉴 삽입
+<nav></nav> : 같은 웹 문서 안에서 다른 위치로 연결하거나 다른 웹 문서로 연결하는 링크를 만듦.
+<main></main> : 웹 문서에서 핵심이 되는 내용. 한 번만 사용 가능
+<article></article> : 독립적인 컨텐츠를 담음(신문, 잡지 ,기사)
+<section></section> : 컨텐츠 영역. 몇 개의 컨텐츠를 묶는 용도
+<aside></aside> : 사이드 바 영역
+<footer></footer>웹 문서 맨 아래
+<div></div> : 여러 소스를 묶음
+
+<p></p> : 단락
+<br> : 줄 바꿈
+<blockquote></blockquote> :인용문. 들여 쓰기 됨
+<strong></strong> : 경고, 주의 사항처럼 강조
+<b></b> : 단순히 글자만 굵게
+<em></em> : 이탤릭체로 흐름상 특정 부분 ㄱ ㅏㅇ조
+<i></i> : 생각이나 용어, 관용구(이탤릭체)
+<sup></sup> : 위 첨자
+<sub></sub> : 아래 첨자
+<u></u> :밑줄
+<ins></ins> : 공동 작업 문서에 새로운 내용 삽입
+<del></del> : 공동 작업 문서에 기존 내용 삭제
+
+<ol></ol> : ordered list
+<li></li> : list
+<ol type=“1”> : 숫자(기본값)
+<ol type=”a” start=“3”> : c부터 시작
+<ol type=“I”> : 로마 숫자 대문자
+
+<ul></ul> : unordered list
+
+<dl></dl> : description list. 이름과 값 형태
+<dt></dt> : 이름 부분 지정
+<dd></dd> : 값 부분 지정
+
+table은 row, column, cell로 이루어져있다.
+<table>
+	<caption>
+</table>
+<caption></caption> : 표 제목
+<tr></tr> : 행을 만듦
+<td></td> : 행 안에 있는 셀을 만듦
+<th></th> : 제목 행 셀
+<thead></thead> : 제목
+<tbody></tbody> : 본문
+<tfoot></tfoot> : dydir
+<td rowspan=“합칠 셀의 개수”>셀의 내용</td> : 행을 합침
+<td colspan=“합칠 셀의 개수”>셀의 내용</td> : 열을 합침
+<col>, <colgroup> : 열을 묶어서 특정 열에 배경색을 넣거나 너비를 바꾸기 위해 사용
+<col>, <colgroup>은 반드시 <caption> 태그 다음에 써야 한다.
+<colgroup>태그 안에 <col>태그를 포함해 표 전체 열의 개수만큼 <col> 태그를 넣어야 한다..
+
+<img src=“이미지 파일 경로” alt=“대체용 텍스트”>
+
+GIF(graphic interchange format) : 색상 수는 최대 256가지 다른 이미지 파일 형식에 비해 파일 크기가 작아서 아이콘이나 불릿 등 작은 이미지에 주로 사용.
+JPG/JPEG(joint photographic experts group) : GIF보다 색상과 명암을 다양하게 표현.
+수정하거나 저장하는 작업 반복하면 화질이 떨어질 수 있음
+PNG(portable network graphics) : 네트워크용으로 개발된 파일 형식. 색상을 다양하게 표현하면서 투명한 배경을 만들 수 있어 웹에서 가장 많이 사용 됨.
+
+<img src”images/salad.jpg” alt=“레드향” width=“50%”>
+width, height : 둘 중 하나만 써줘도 나머지 속성은 자동으로 비율을 계산해서 나타냄
+% : 이미지 크기의 값을 퍼센트로 지정하면현재 웹 브라우저 창의 너비와 높이를 기준으로 이미지 크기를 결정합니다.
+px : 이미지 크기의 값을 필셀로 지정하면 이미지의 너비나 높이를 해당 픽셀 크기만큼 표시한다.
+
+<object width=“너비” height=“높이” data=“멀티미디어 파일></object>
+<embed src=“멀티미디어 파일 경로” width=“너비” height=“높이”>
+
+비디오 : mp4, webm
+오디오 : mp3, mp4, m4a
+
+<audio src=“오디오 파일 경로”></audio>
+<video src=“비디오 파일 경로”></video>
+<audio src=“파일 경로” controls></audio>
+<video src=“비디오 파일 경로” controls width=“700”></video>
+controls는 재생, 중지, 볼륨 조절을 할 수 있는 구성요소 컨트롤 바
+video는 너비를 지정해 줘야한다.
+
+audio와 video 태그의 속성
+controls 
+autoplay
+loop
+muted
+preload : 페이지를 불러올 때 오디오나 비디오 파일을 어떻게 로딩할 것인지 지정 사용할 수 있는 값은 auto, metadata, none. 기본값은 preload=“auto”
+width, height
+poster=“파일 이름” : video 태그에 사용하는 속성. 비디오가 재생되기 전까지 화면에 표시될 포스터 이미지를 지정
+
+<a href=“링크할 주소”>텍스트 또는 이미지</a>
+<a href=“링크할 주소” target=“_blank”>텍스트 또는 이미지</a> : 새 탭에서 열기
