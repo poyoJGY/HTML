@@ -3,9 +3,9 @@ Hyper Text Markup Language
 - HyperText는 문서를 서로 연결해 주는 링크
 - Markup은 ‘표시하다’라는 뜻, 웹 브라우저에 내용을 보여주는 텍스트, 이미지, 영상 등의 위치를 표시하는 것을 의미
 
-tag - 웹 브라우저가 어느 부분이 제목, 텍스트 또는 표인지 구별할 수 있도록 꼬리표를 붙여준 것
+tag - 웹 브라우저가 어느 부분이 제목, 텍스트 또는 표인지 구별할 수 있도록 꼬리표를 붙여준 	  것
 
-HTML5 - 이전 버전과 구별하기 위해 HTML5로 부름. 최근 대부분의 웹 브라우저에서 HTML5를 지원하게 되면서 그냥 HTML이라 부르게 되었음
+HTML5 - 이전 버전과 구별하기 위해 HTML5로 부름. 최근 대부분의 웹 브라우저에서				 HTML5를 지원하게 되면서 그냥 HTML이라 부르게 되었음
 
 <!DOCTYPE html> : 현재 문서가 HTML5 언어로 작성한 웹 문서라는 뜻
 <html> ~ </html> : 웹 문서의 시작과 끝
@@ -185,3 +185,56 @@ file : 파일을 첨부할 수 있는 버튼을 넣는다.
 
 hidden : 사용자에게는 보이지 않지만 서버로 넘겨주는 값이 있는 필드를 만든다.
 <input type=“hidden” name=“이름” value=“서버로 넘길 값”>
+
+input 태그의 주요 속성
+autofocus : 페이지를 불러오자마자 폼에서 원하는 요소에 마우스 포인터를 표시
+<input type=텍스트-입력-필드 autofocus require>
+
+placeholder : 입력란에 적당한 힌트 내용 표시
+<input type=“tel” id=“phone” placeholder=“하이픈 빼고 입력해 주세요.”>
+
+readonly : 사용자가 입력하지는 못하고 읽게만 하는 읽기 전용 필드
+<input type=텍스트-입력-필드 readonly>
+readonly == readonly=“readonly” == readonly = “true”
+
+required : 필수 입력 필드
+<input type=“text” id=“prod” required>
+required == required=“required” == required == “true”
+
+textarea : 폼에서 텍스트 여러 줄 입력하는 영역
+<textarea>내용</textarea>
+속성 : 너비 크기 cols, 몇 줄 row. 한글 1글자 == 영문자 2글자
+
+<select></select> : 드롭다운
+속성
+size : 드롭다운 항목 개수 지정
+multiple : 드롭다운 목록에 둘 이상의 항목 선택할 때 사용
+
+<option> : 목록에 표시되는 옵션
+속성
+value : 서버로 넘겨줄 값 지정
+selected : 기본 선택
+
+<select>
+	<option value=“값1”>내용</option>
+	<option value=“값2”>내용</option>
+</select>
+
+<datalist></datalist> : 데이터 목록
+<option></option>
+<datalist>에서 <option>의 value 속성은 서버에 넘겨줄 값을 텍스트 필드에 나타난다.
+
+<label for=“prod2”>포장 여부</label>
+<input type=“text” id=“prod2” list=“pack”>
+<datalist id=“pack”>
+	<option value=“package”>선물 포장</option>
+	<option value=“no_package”>포장 안 함</option>
+</datalist>
+
+<button></button> : 폼 전송, 리셋 버튼 삽입
+<button type=“submit”>내용</button>
+<button type=“reset”>내용</button>
+<button type=“button”>내용</button>
+submit : 폼을 서버로 전송 <input type=“submit”>과 같은 기능
+reset : 폼에 입력한 내용 초기화 <input type=“reset”>과 같은 기능
+button : 버튼 형태만 만들 뿐 기능X <input type=“button”>과 같은 기능
